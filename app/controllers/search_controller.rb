@@ -1,5 +1,6 @@
 class SearchController < ApplicationController 
   def index 
-    @member = AirbenderFacade.nation_characters(params[:nation])
+    @members = AirbenderFacade.nation_characters(params[:nation])
+    @member_count = AirbenderFacade.characters_count(params[:nation])
   end
 end

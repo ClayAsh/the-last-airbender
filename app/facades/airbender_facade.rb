@@ -5,4 +5,9 @@ class AirbenderFacade
     Member.new(character)
     end
   end
+
+  def self.characters_count(nation)
+    data = AirbenderService.get_nation_characters(nation)
+    MemberCount.new(data)
+  end
 end

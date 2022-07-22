@@ -1,0 +1,20 @@
+Total number: <%=@member_count.char_count %>
+<% @members.each do |member|%>
+  <%= image_tag("#{member.photo}", size: "200") %></br>
+  Name: <%=member.name%></br>
+  <% if member.allies.empty? %>
+  Applies: None </br>
+  <%else%>
+  <%member.allies.each do |allie|%>
+   Allies: <%=allie%></br>
+  <%end%>
+  <%end%>
+  <% if member.enemies.empty? %>
+  Enemies: None </br>
+  <%else%>
+  <%member.enemies.each do |enemy|%>
+  Enemies: <%=enemy%></br>
+  <%end%>
+  <%end%>
+  Affiliation: <%=member.affiliation%></br>
+<%end%>

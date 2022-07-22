@@ -3,10 +3,10 @@ class Member
               :allies,
               :enemies,
               :affiliation,
-              :photo
+              :photo,
+              :char_count
 
   def initialize(attributes)
-    # require 'pry'; binding.pry
     @name = attributes[:name]
     @allies = attributes[:allies]
     @enemies = attributes[:enemies]
